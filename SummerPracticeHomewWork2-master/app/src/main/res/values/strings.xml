@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">homework2</string>
+    <string name="home_title">Home</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="messages_title">Messages</string>
+    <string name="music_title">Music</string>
+    <string name="profile_title">Profile</string>
+    <string name="song_title">Song name</string>
+    <string name="artist_title">Artist name</string>
+    <string name="album_title">Album name</string>
+</resources>

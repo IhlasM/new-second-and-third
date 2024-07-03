@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/textFragment"
+        android:name="ru.itis.homework2.fragments.TextFragment"
+        android:label="Text Fragment"
+        tools:layout="@layout/fragment_text">
+        <action
+            android:id="@+id/action_textFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_textFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_textFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_textFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_textFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ru.itis.homework2.fragments.HomeFragment"
+        android:label="Home Fragment"
+        tools:layout="@layout/fragment_home"
+        >
+        <action
+            android:id="@+id/action_homeFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_textFragment"
+            app:destination="@id/textFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailSongFragment"
+        android:name="ru.itis.homework2.fragments.DetailSongFragment"
+        android:label="Detail Song"
+        tools:layout="@layout/item_song_detail">
+        <action
+            android:id="@+id/action_musicFragment_to_detailSongFragment"
+            app:destination="@id/detailSongFragment">
+            <argument
+                android:name="songTitle"
+                app:argType="string" />
+            <argument
+                android:name="artistName"
+                app:argType="string" />
+            <argument
+                android:name="albumTitle"
+                app:argType="string" />
+            <argument
+                android:name="songImage"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="ru.itis.homework2.fragments.NotificationsFragment"
+        android:label="Notification Fragment"
+        tools:layout="@layout/fragment_notification"
+        >
+        <action
+            android:id="@+id/action_notificationsFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="ru.itis.homework2.fragments.MessagesFragment"
+        android:label="Messages Fragment"
+        tools:layout="@layout/fragment_messages"
+        >
+        <action
+            android:id="@+id/action_messagesFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_messagesFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/musicFragment"
+        android:name="ru.itis.homework2.fragments.MusicFragment"
+        android:label="Music Fragment"
+        tools:layout="@layout/fragment_music"
+        >
+        <action
+            android:id="@+id/action_musicFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_musicFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_musicFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_musicFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_musicFragment_to_detailSongFragment"
+            app:destination="@id/detailSongFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.itis.homework2.fragments.ProfileFragment"
+        android:label="Profile Fragment"
+        tools:layout="@layout/fragment_profile"
+        >
+        <action
+            android:id="@+id/action_profileFragment_to_messagesFragment"
+            app:destination="@id/messagesFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_musicFragment"
+            app:destination="@id/musicFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>
